@@ -1,0 +1,57 @@
+/* 
+图谱节点颜色自定义样式
+将此文件复制到您的 .obsidian/snippets/ 目录下并在设置中启用
+*/
+
+/* 文件节点 - 深蓝色 */
+.graph-view .node[data-type=""] {
+    fill: #2563eb !important;
+    stroke: #1e40af !important;
+}
+
+/* 根标签节点 - 绿色 */
+.graph-view .node.tag[data-path="带状线传输"],
+.graph-view .node.tag[data-path="电磁波传播"],
+.graph-view .node.tag[data-path="TEM模式"] {
+    fill: #16a34a !important;
+    stroke: #15803d !important;
+}
+
+/* 一级子节点 - 橙色 */
+.graph-view .node.tag[data-path="1"],
+.graph-view .node.tag[data-path="2"],
+.graph-view .node.tag[data-path="3"] {
+    fill: #ea580c !important;
+    stroke: #c2410c !important;
+}
+
+/* 根据层级设置不同颜色 */
+/* 第一层子节点 - 浅橙色 */
+.graph-view .node.tag[data-level="1"] {
+    fill: #fb923c !important;
+    stroke: #ea580c !important;
+}
+
+/* 第二层子节点 - 深橙色 */
+.graph-view .node.tag[data-level="2"] {
+    fill: #ea580c !important;
+    stroke: #c2410c !important;
+}
+
+/* 第三层子节点 - 红色 */
+.graph-view .node.tag[data-level="3"] {
+    fill: #dc2626 !important;
+    stroke: #b91c1c !important;
+}
+
+/* 悬停效果 */
+.graph-view .node:hover {
+    fill-opacity: 0.8 !important;
+    stroke-width: 3px !important;
+}
+
+/* 选中效果 */
+.graph-view .node.is-active {
+    stroke-width: 4px !important;
+    stroke-dasharray: 5,5 !important;
+}
